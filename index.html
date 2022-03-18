@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Kota Bunga</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+<header>
+
+	<div class="container">
+		<div class="slide" style="background-image: url('mawar.png');"></div>
+		<div class="slide" style="background-image: url('adenium.png');"></div>
+		<div class="slide" style="background-image: url('matahari.png');"></div>
+		
+	</div>
+
+	<script>
+		activeslideimg();
+
+		function activeslideimg(activeSlide = 2){
+			const slides = document.querySelectorAll(".slide");
+			
+			slides[activeSlide].classList.add("active");
+			
+			for(const slide of slides){
+				slide.addEventListener("click", () => {
+					clearActiveClasses();
+
+					slide.classList.add("active");
+				});
+			}
+
+			function clearActiveClasses(){
+				slides.forEach((slide) => {
+					slide.classList.remove("active");
+				});
+			}
+		}
+	</script>
+
+  <div class="jumbotron">
+		<h1>Kota Bunga</h1>
+		<p>Kota yang berisi berbagai macam bunga dari seluruh dunia</p>
+  </div>
+ 
+
+<nav>        
+	<ul>
+            <li><a href="#bunga">Bunga</a></li>
+            <li><a href="#adenium">Adenium</a></li>
+            <li><a href="#matahari">Matahari</a></li>
+        </ul>
+</nav>
+
+</header>
+
+<main>
+<div id="content">
+   
+<article id="bunga" class="card">
+ <h2 id="bunga">Bunga</h2>
+       <img src="mawar.png" class="featured-image" alt="mawar">
+       <p>Bunga adalah bahasa yang universal, mereka biasa tumbuh di taman-taman, atau bahkan di pinggir jalan. Bunga tidak hanya sebagai hiasan di taman saja namun juga bisa di mempercantik rumah, bahkan dijadikan hadiah. </p>
+ 
+       <p>Bunga sendiri sudah lama dikagumi dan dimanfaatkan oleh manusia. Tidak hanya itu, bunga juga sebagai objek asmara, ritual,religi, obat-obatan, bahkan sumber makanan. Tulisan di bawah ini akan membahas lebih lanjut tentang bunga dan beberapa contohnya.</p>
+ </article>
+
+<article id="adenium" class="card">
+       <h2 id="adenium">Adenium</h2>
+       <img src="adenium.png" class="featured-image" alt="adenium">
+       <p>Adenium obesum ditanam sebagai tanaman hias di daerah yang beriklim sedang. Banyak sekali hibrida yang telah dikembangkan. Adenium disenangi karena bunganya yang berwarna-warni dan juga kelopaknya yang tebal dan tidak biasa. Mereka bisa ditanam selama bertahun-tahun dalam pot dan biasanya digunakan untuk bonsai.</p>
+       <p>Adenium juga dikenal dengan mawar gurun. Di Thailand, adenium juga dikenal dengan kalachuchi bangkok. Karena kemiripannya dengan tanaman kamboja mini dan sering digunakan sebagai bonsai, Adenium obesum juga dikenal sebagai kamboja Jepang.</p>
+</article>
+
+<article id="matahari" class="card">
+       <h2 id="matahari">Matahari</h2>
+       <img src="matahari.png" class="featured-image" alt="matahari">
+       <p>Bunga matahari berasal dari Amerika. Biji bunga matahari awalnya ditemukan di Meksiko berasal dari tahun 2100 SM. Penduduk asli Amerika menanam bunga matahari sebagai tanaman yang berasal dari Meksiko. Pada abad ke -16, keturunan bunga matahari yang pertama dibawa dari amerika ke Eropa oleh para penjajah. Disebut bunga matahari karena bunga ini selalu condong ke arah matahari.</p>
+       <p>Sebelum mekar, bunga matahari akan miring di siang hari untuk menghadap matahari. Mereka melakukan itu untuk mendapat lebih banyak pasokan sinar matahari. Pasokan sinar matahari sangat penting dalam proses fotosintesis. Ketika dewasa, bunga matahari akan selalu menghadap ke timur, arah matahari terbit, untuk selalu dihangatkan oleh matahari.</p>
+</article>
+
+</div>
+
+<aside>
+
+<article class="profile card">
+	<header>
+		<h2>FRONTEND KOMINFO</h2>
+		<p>Kelompok A19</p>
+		<figure>
+		<img src="frontend.jpg">
+		<figcaption>KELAS B</figcaption>
+           	</figure>
+	</header>
+
+	<section>
+		<h3>Informasi Peserta</h3>
+  		 <table>
+    		<tr>
+      	     	<td>Dimas Prabowo</td>
+    		</tr>
+
+   		    <tr>
+        		<td>Bella Wahmilyana A</td>
+     		</tr>
+    		    
+            <tr>
+      			<td>Dandy Ali Akbar</td>
+    		</tr>
+   		    
+            <tr>
+       			<td>Bima Dwi Darmayana</td>
+     		</tr>
+     		    
+            <tr>
+     			<td>Desya Ristya Putri</td>
+    		</tr>
+ 		 </table>
+	</section>
+
+</article>
+</aside>
+
+</main>
+<footer>
+ <p>Fresh Graduate Academy &#169; 2022, Frontend Developer</p>
+</footer>
+
+</body>
+</html>
